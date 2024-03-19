@@ -1,0 +1,182 @@
+body{
+  background: #F3F5FC;
+  font-family: "Inter";
+  
+}
+
+.header{
+  width: 90%;
+  margin: auto;
+}
+
+.logo{
+  margin-top: 20px;
+  margin-left: none;
+}
+
+/* main */
+
+.main{
+  width: 80%;
+  margin: auto 40px auto auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: calc(100vh - 91px - 72px);
+  align-items: end;
+}
+
+.left{
+height: 85%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.text__encriptar{
+  width: 80%;
+  font-size: 32px;
+  color: #0A3871;
+  background: none;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: "Inter";
+}
+
+.text__encriptar::placeholder{
+  color: #0A3871;
+}
+
+.left__informacion{
+  color: #495057;
+  font-size: 12px;
+}
+
+.left__botones{
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.boton__encriptar,
+.boton__desencriptar,
+.boton__copiar{
+border: 1px solid #0A3871;
+cursor: pointer;
+max-width: 328px;
+min-width: 160px;
+width: 40%;
+height: 67px;
+font-size: 16px;
+border-radius: 24px;
+}
+
+.boton__encriptar{
+background-color: #0A3871;
+color: white;
+}
+
+.boton__desencriptar{
+background-color: #D8DFE8;
+color: #0A3871;
+}
+
+.rigth{
+background-color: white;
+height: calc(100% + 48px );
+border-radius: 32px;
+padding: 32px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 32px;
+align-items: center;
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.rigth.ajustar{
+  justify-content: space-between;
+}
+
+.muneco{
+  width: 100%;
+}
+
+.oculto{
+  display: none;
+}
+
+.mensaje__final{
+  background: none;
+  color: #343A40;
+  border: none;
+  outline: none;
+  resize: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Inter";
+}
+
+.mensaje__final.ajustar{
+  text-align: left;
+  font-weight: lighter;
+  height: 80%;
+}
+
+.rigth__info{
+  color: #495057;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Inter";
+}
+
+.boton__copiar{
+  background: transparent;
+  color: #0A3871;
+  width: 100%;
+
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  font-family: "Inter";
+  color: #0A3871;
+  font-size: 14px;
+  margin-top: 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% auto;
+    width: auto;
+    margin: auto 40px;
+  }
+  .rigth{
+    height: 100%;
+  }
+  .left__botones{
+    justify-content: center ;
+  }
+
+  .boton__encriptar,
+  .boton__desencriptar{
+    width: 45%;
+  }
+
+  .muneco{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .boton__encriptar,
+  .boton__desencriptar{
+    max-width: none;
+    width: 100%;
+  }
+}
